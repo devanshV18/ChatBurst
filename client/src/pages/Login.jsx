@@ -8,7 +8,12 @@ const Login = () => {
     const toggleLogin = () => setIsLogin(false)
 
   return (
-    <Container>
+    <Container component={"main"} maxWidth="xs" sx={{
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+    }}>
         <Paper
             elevation={3}
             sx={{
