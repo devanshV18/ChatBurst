@@ -25,7 +25,7 @@ const Login = () => {
                         <TextField required fullWidth label="password" type='password' margin="normal" variant="outlined"/>
                         <Button sx = {{marginTop: "1rem"}} variant='contained' color='primary' type='submit' fullWidth>Login</Button>
                         <Typography textAlign={"center"} m={"1rem"}>OR</Typography>
-                        <Button sx = {{marginTop: "1rem"}} fullWidth variant='text' onClick={toggleLogin}>Sign Up Instead</Button>
+                        <Button fullWidth variant='text' onClick={toggleLogin}>Sign Up Instead</Button>
                     </form>
                 </>
                 : 
