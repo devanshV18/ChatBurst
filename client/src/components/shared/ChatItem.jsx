@@ -5,7 +5,7 @@ import { Avatar, Typography, Stack, Box } from '@mui/material'
 const ChatItem = ({avatar = [], name, _id, groupChat = false, sameSender, isOnline, newMessageAlert, index = 0, handleDeleteChat}) => {
   return (
     <Link to={`/chat/${_id}`} 
-    onContextMenu={(e)=>handleDeleteChat(e, _id, groupChat)} 
+    onContextMenu={(e) => handleDeleteChat(e, _id, groupChat)}
     sx={{padding:"0"}}
     >
         <div style={{
