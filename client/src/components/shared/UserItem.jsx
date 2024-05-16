@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {memo} from 'react'
 import { Avatar, IconButton, ListItem, Stack, Typography } from '@mui/material'
 import {Add as AddIcon} from "@mui/icons-material"
 const UserItem = ({user,handler,handlerIsLoading}) => {
@@ -17,7 +17,8 @@ const UserItem = ({user,handler,handlerIsLoading}) => {
                 WebkitLineClamp: 1,
                 WebkitBoxOrient: "vertical",
                 overflow: "hidden",
-                textOverFlow: "ellipsis"
+                textOverFlow: "ellipsis",
+                width: "100%"
             }}
             >
                 {name}
