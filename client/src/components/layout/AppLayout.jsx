@@ -5,6 +5,7 @@ import { Grid } from '@mui/material'
 import ChatList from '../specific/ChatList'
 import { sampleChats } from '../../constants/sampleData'
 import { useParams } from 'react-router-dom'
+import Profile from "../specific/Profile"
   
   
 
@@ -34,7 +35,7 @@ const AppLayout = () => WrappedComponent => {
               </Grid>
 
               <Grid item md={4} lg={3} sx={{display: {xs: "none", md: "block"}, padding: "2rem", bgcolor: "rgba(0,0,0,0.85)"}} height={"100vh"}>
-                Third
+                <Profile/>
               </Grid>
             </Grid>
             
