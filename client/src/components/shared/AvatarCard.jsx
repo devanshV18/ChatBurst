@@ -1,5 +1,5 @@
 import React from 'react'
-import {Stack, AvatarGroup, Avatar} from "@mui/material"
+import {Stack, AvatarGroup, Avatar,Box} from "@mui/material"
 
 const AvatarCard = ({avatar = [],max=4}) => {
   return (
@@ -31,4 +31,3 @@ const AvatarCard = ({avatar = [],max=4}) => {
 }
 
 export default AvatarCard
-{avatar = []}
