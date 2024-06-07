@@ -12,19 +12,23 @@ const NewGroup = () => {
   const [selectedMembers, setSelectedMembers] = useState([])
 
   const selectMemberHandler = (id) => {
-    setSelectedMembers(prev => [...prev,id])
+
+    // setMembers((prev) => prev.map((user) => user._id === id ? {...user,isAdded: !user.isAdded} : user ))
+
+    setSelectedMembers((prev) => prev.includes(id) ? prev.filter((currElement) => currElement !== id) : [...prev,id])
   }
   console.log(selectedMembers)
 
-  const submitHandler = () => {
+  const submitHandler = () => {}
 
-  }
+  const closeHandler = () => {}
+  
   return (
     <Dialog open>
       <Stack p={{xs : "1rem", sm : "2rem"}} maxWidth={"25rem"}>
         <DialogTitle textAlign={"center"} variant='h4'>New Group</DialogTitle>
 
-        <TextField value={groupName.value} onChange={groupName.changeHandler}/>
+        <TextField value={groupName.value} onChange={groupName.changeHandler} />
 
         <Typography variant='body1'>
           Members
@@ -33,7 +37,7 @@ const NewGroup = () => {
         <Stack>
           {
             members.map((i) => (
-              <UserItem user={i} key={i._id} handler={selectMemberHandler}/>
+              <UserItem user={i} key={i._id} handler={selectMemberHandler} isAdded = {selectedMembers.includes(i._id)}/>
             ))
           }
         </Stack>
