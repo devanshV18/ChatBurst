@@ -1,8 +1,9 @@
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import React, {memo} from 'react'
 import { lightBlue } from '../../constants/color'; 
 import moment from 'moment';
 import { fileFormat } from '../../lib/features';
+import RenderAttachment from './RenderAttachment';
 const MessageComponent = ({message, user}) => {
 
     const {sender, attachments = [], content, createdAt} = message;
@@ -36,7 +37,12 @@ const MessageComponent = ({message, user}) => {
             const file = fileFormat(url)
 
             return <Box key={index}>
-                <a href="" target='blank' download style={{color: "black"}}></a>
+                <a href={url} 
+                target='blank' 
+                download 
+                style={{color: "black"}}>
+                    {RenderAttachment(file,url)}
+                </a>
             </Box>
 
         })

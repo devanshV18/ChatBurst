@@ -5,11 +5,11 @@ import { FileOpen as FileOpenIcon } from '@mui/icons-material';
 const RenderAttachment = ({file,url}) => {
   switch (file) {
     case "video": 
-        <video src={url} preload='none' width={"200px"} controls></video>
-        break;
+        return <video src={url} preload='none' width={"200px"} controls></video>
+        
 
     case "image":
-        <img src={transformImage(url,200)} 
+        return <img src={transformImage(url,200)} 
         alt="attachment" 
         width={"200px"}
         height={"150px"}
@@ -17,15 +17,15 @@ const RenderAttachment = ({file,url}) => {
             objectFit: "contain"
         }}
         />
-        break;
+        
 
     case "audio":
-        <audio src={url} preload='none' controls></audio>
-        break;
+        return <audio src={url} preload='none' controls></audio>
+        
 
     default:
-        <FileOpenIcon/>
-        break;
+        return <FileOpenIcon/>
+        
   }
 }
 
