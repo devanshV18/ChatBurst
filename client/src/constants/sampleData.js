@@ -1,3 +1,5 @@
+import Chat from "../pages/Chat"
+
 export const sampleChats = [
     {
     avatar:["https://www.w3schools.com/howto/image_avatar.png"],
@@ -45,5 +47,41 @@ export const sampleNotifications = [
             name:"John Boi",
         },
         _id:"2"
+    }
+]
+
+export const sampleMessage = [
+    {
+        attachments: [
+            {
+                public_id: "asdasd",
+                url: "https://www.w3schools.com/howto/img_avatar.png"
+            },
+        ],
+        content: "Lauda ka msg hai",
+        _id: "fisnfisnf",
+        sender: {
+            _id: "user._id",
+            name: "Chodu"
+        },
+        Chat:"chatId",
+        createdAt: "2024-02-12T10:41:30.630Z"
+    },
+
+    {
+        attachments: [
+            {
+                public_id: "asdasd2",
+                url: "https://www.w3schools.com/howto/img_avatar.png"
+            },
+        ],
+        content: "Lauda 2 ka msg hai",
+        _id: "fisnfisnf",
+        sender: {
+            _id: "adadmad",
+            name: "Chodu2"
+        },
+        Chat:"chatId",
+        createdAt: "2024-02-12T10:41:30.630Z"
     }
 ]
