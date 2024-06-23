@@ -24,11 +24,11 @@ const NewGroup = () => {
   const closeHandler = () => {}
   
   return (
-    <Dialog open>
-      <Stack p={{xs : "1rem", sm : "2rem"}} maxWidth={"25rem"}>
+    <Dialog open onClose={closeHandler}>
+      <Stack p={{xs : "1rem", sm : "2rem"}} width={"25rem"}>
         <DialogTitle textAlign={"center"} variant='h4'>New Group</DialogTitle>
 
-        <TextField value={groupName.value} onChange={groupName.changeHandler} />
+        <TextField label="Group Name" value={groupName.value} onChange={groupName.changeHandler} />
 
         <Typography variant='body1'>
           Members
