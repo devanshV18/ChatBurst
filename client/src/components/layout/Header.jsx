@@ -15,7 +15,7 @@ const Header = () => {
     const [isNewGroup, setIsNewGroup] = useState(false);
     const [isNotification, setIsNotification] = useState(false);
 
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
     const handleMobile = () => {
         setIsMobile(prev => !prev)

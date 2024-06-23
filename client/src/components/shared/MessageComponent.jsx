@@ -36,16 +36,17 @@ const MessageComponent = ({message, user}) => {
             const url = attachment.url
             const file = fileFormat(url)
 
-            return <Box key={index}>
-                <a href={url} 
-                target='blank' 
-                download 
-                style={{color: "black"}}>
-                    {RenderAttachment(file,url)}
-                </a>
-            </Box>
-
-        })
+            return (
+              <Box key={index}>
+                  <a href={url} 
+                  target='blank' 
+                  download
+                  style={{color: "black"}}>
+                      {RenderAttachment(file,url)}
+                  </a>
+              </Box>
+            )
+        } )
       }
 
       <Typography variant='caption' color={"text.secondary"}>

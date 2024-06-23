@@ -52,12 +52,7 @@ export const sampleNotifications = [
 
 export const sampleMessage = [
     {
-        attachments: [
-            {
-                public_id: "asdasd",
-                url: "https://www.w3schools.com/howto/img_avatar.png"
-            },
-        ],
+        attachments: [],
         content: "Lauda ka msg hai",
         _id: "fisnfisnfvsiuvsin",
         sender: {
@@ -75,10 +70,10 @@ export const sampleMessage = [
                 url: "https://www.w3schools.com/howto/img_avatar.png"
             },
         ],
-        content: "Lauda 2 ka msg hai",
+        content: "",
         _id: "fisnfisnf",
         sender: {
-            _id: "adadmad",
+            _id: "nsnifaad",
             name: "Chodu2"
         },
         Chat:"chatId",

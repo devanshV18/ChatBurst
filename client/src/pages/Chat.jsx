@@ -1,89 +1,92 @@
-import React, {useRef} from 'react'
-import AppLayout from '../components/layout/AppLayout'
-import { IconButton, Stack } from '@mui/material'
-import {AttachFile as AttachFileIcon, Send as SendIcon} from '@mui/icons-material'
-import { gray } from '../constants/color'
-import { InputBox } from '../components/styles/StyledComponents'
-import FileMenu from '../components/dialogs/FileMenu'
-import { sampleMessage } from '../constants/sampleData'
-import MessageComponent from '../components/shared/MessageComponent'
+import React, { useRef, Fragment } from "react";
+import AppLayout from "../components/layout/AppLayout";
+import { IconButton, Stack } from "@mui/material";
+import { gray } from "../constants/color";
+import { AttachFile as AttachFileIcon, Send as SendIcon } from "@mui/icons-material";
+import { InputBox } from "../components/styles/StyledComponents";
+import FileMenu from "../components/dialogs/FileMenu";
+import { sampleMessage } from "../constants/sampleData";
+import MessageComponent from "../components/shared/MessageComponent";
+
+
+const user = {
+  _id: "nsnifaad",
+  name: "Devansh Verma"
+}
 
 const Chat = () => {
 
-  const containerRef = useRef(null)
-
-  const user = {
-    _id: "adadmad",
-    name: "Devansh Verma"
-  }
+  const containerRef = useRef(null);
 
   return (
-    <div>CHat</div>
-    // <>
-    //   <Stack ref={containerRef}
-    //     boxSizing={"border-box"}
-    //     padding={"1rem"}
-    //     spacing={"1rem"}
-    //     bgcolor={gray}
-    //     height={"90%"}
-    //     sx={{
-    //       overflowX: "hidden",
-    //       overflowY: "auto"
-    //     }}
-    //   >
+    <Fragment>
+      <Stack
+        ref = {containerRef}
+        boxSizing={"border-box"}
+        padding={"1rem"}
+        spacing={"1rem"}
+        bgcolor={gray}
+        height={"90%"}
+        sx = {{
+          overflowX: "hidden",
+          overflowY: "auto",
+        }}
+      >
 
-    //     {
-    //       sampleMessage.map((i) => (
-    //         <MessageComponent key={i._id} message = {i} user={user}/>
-    //       ))
-    //     }
+        {
+          sampleMessage.map((i) => (
+            <MessageComponent key={i._id} message = {i} user = {user}/>
+          ))
+        }
 
+      </Stack>
 
-    //   </Stack>
+      <form 
+        style={{
+          height: "10%"
+        }}
+      >
 
-    //   <form
-    //   style={{height:"10%"}}
-    //   >
-    //     <Stack
-    //     direction={"row"}
-    //     height={"100%"}
-    //     padding={"1rem"}
-    //     alignItems={"center"}
-    //     position={"relative"}
-    //     >
-    //       <IconButton
-    //       sx={{
-    //         position: "absolute",
-    //         left: "1.5rem",
-    //         rotate: "30deg"
-    //       }}
+        <Stack 
+          direction={"row"} 
+          height={"100%"}
+          padding={"1rem"}
+          alignItems={"center"}
+          position={"relative"}
+        >
+          <IconButton
+            sx = {{
+              position: "absolute",
+              left: "1.5rem",
+              rotate: "30deg"
+            }}
+          >
+            <AttachFileIcon/>
+          </IconButton>
 
-          
-    //       >
-    //         <AttachFileIcon/>
-    //       </IconButton>
+          <InputBox placeholder="Type yout Message here"/>
 
-    //       <InputBox placeholder='Type message here...'/>
+          <IconButton
+            type="submit"
+            sx = {{
+              rotate: "-30deg",
+              bgcolor: "#ea7070",
+              color: "white",
+              marginLeft: "1rem",
+              padding: "0.5rem",
+              "&:hover":{
+                bgcolor: "error.dark"
+              },
+            }}
+          >
+            <SendIcon/>
+          </IconButton>
 
-    //       <IconButton type='submit' 
-    //       sx={{
-    //         // rotate: "-30deg",
-    //         backgroundColor: "#ea7070", 
-    //         color: "white", 
-    //         marginLeft: "1rem", 
-    //         padding: "0.5rem",
-    //         "&:hover":{
-    //           bgcolor:"error.dark"
-    //         }
-    //         }}>
-    //         <SendIcon/>
-    //       </IconButton>
-    //     </Stack>
-    //   </form>
+        </Stack>
+      </form>
 
-    //     <FileMenu/>
-    // </>
+      <FileMenu/>
+    </Fragment>
   )
 }
-
-export default Chat
+export default AppLayout()(Chat)
