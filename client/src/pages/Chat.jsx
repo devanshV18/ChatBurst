@@ -18,71 +18,72 @@ const Chat = () => {
   }
 
   return (
-    <>
-      <Stack ref={containerRef}
-        boxSizing={"border-box"}
-        padding={"1rem"}
-        spacing={"1rem"}
-        bgcolor={gray}
-        height={"90%"}
-        sx={{
-          overflowX: "hidden",
-          overflowY: "auto"
-        }}
-      >
+    <div>CHat</div>
+    // <>
+    //   <Stack ref={containerRef}
+    //     boxSizing={"border-box"}
+    //     padding={"1rem"}
+    //     spacing={"1rem"}
+    //     bgcolor={gray}
+    //     height={"90%"}
+    //     sx={{
+    //       overflowX: "hidden",
+    //       overflowY: "auto"
+    //     }}
+    //   >
 
-        {
-          sampleMessage.map((i) => (
-            <MessageComponent key={i._id} message = {i} user={user}/>
-          ))
-        }
+    //     {
+    //       sampleMessage.map((i) => (
+    //         <MessageComponent key={i._id} message = {i} user={user}/>
+    //       ))
+    //     }
 
 
-      </Stack>
+    //   </Stack>
 
-      <form
-      style={{height:"10%"}}
-      >
-        <Stack
-        direction={"row"}
-        height={"100%"}
-        padding={"1rem"}
-        alignItems={"center"}
-        position={"relative"}
-        >
-          <IconButton
-          sx={{
-            position: "absolute",
-            left: "1.5rem",
-            rotate: "30deg"
-          }}
+    //   <form
+    //   style={{height:"10%"}}
+    //   >
+    //     <Stack
+    //     direction={"row"}
+    //     height={"100%"}
+    //     padding={"1rem"}
+    //     alignItems={"center"}
+    //     position={"relative"}
+    //     >
+    //       <IconButton
+    //       sx={{
+    //         position: "absolute",
+    //         left: "1.5rem",
+    //         rotate: "30deg"
+    //       }}
 
           
-          >
-            <AttachFileIcon/>
-          </IconButton>
+    //       >
+    //         <AttachFileIcon/>
+    //       </IconButton>
 
-          <InputBox placeholder='Type message here...'/>
+    //       <InputBox placeholder='Type message here...'/>
 
-          <IconButton type='submit' 
-          sx={{
-            // rotate: "-30deg",
-            backgroundColor: "#ea7070", 
-            color: "white", 
-            marginLeft: "1rem", 
-            padding: "0.5rem",
-            "&:hover":{
-              bgcolor:"error.dark"
-            }
-            }}>
-            <SendIcon/>
-          </IconButton>
-        </Stack>
-      </form>
+    //       <IconButton type='submit' 
+    //       sx={{
+    //         // rotate: "-30deg",
+    //         backgroundColor: "#ea7070", 
+    //         color: "white", 
+    //         marginLeft: "1rem", 
+    //         padding: "0.5rem",
+    //         "&:hover":{
+    //           bgcolor:"error.dark"
+    //         }
+    //         }}>
+    //         <SendIcon/>
+    //       </IconButton>
+    //     </Stack>
+    //   </form>
 
-        <FileMenu/>
-    </>
+    //     <FileMenu/>
+    // </>
   )
 }
 
-export default AppLayout()(Chat)
+export default Chat
